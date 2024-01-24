@@ -1,0 +1,273 @@
+
+header h1{
+    font-size: 50px;
+    color: white;
+}
+header{
+    background-color: rgb(8, 85, 8);
+    height: 150px;
+    width:100%;
+    z-index: 1;
+}
+.div1{
+    height: 50px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+ol{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+li{
+    margin-right: 50px;
+    font-size: 25px;
+    
+}
+li a{
+    text-decoration: none;
+    padding: 10px 10px;
+    font-weight: bolder;
+    color: black;
+}
+li a:hover{
+    background-color: black;
+    color: white;
+}
+.div2{
+    height: 500px;
+    width: 100%;
+    background-image:url(mainbg.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    float: left;
+
+}
+
+.div3{
+
+    background-blend-mode:normal;
+    height:970px;
+    width: 100%;
+    background-color: rgb(79, 87, 78);
+    float: left;
+}
+.div3 h2{
+   margin-top: 50px;
+    color: rgb(217, 218, 208);
+    font-size: 35px;
+    font-weight: 600;
+    text-align:center
+}
+.div3 ul{
+    margin: 40px;
+    font-size: 20px;
+
+}
+.div3 ul li{
+    padding: 10px;
+    margin-left: 75px;
+}
+.div3 .buttonslide{
+    height: 50px;
+    width: 100px;
+    margin-left: 250px;
+    margin-right: 150px;
+    background-color: black;
+    color: white;
+}
+.row1{
+    height: 450px;
+    width:100%;
+    position: relative;
+}
+.buyslide,.sellslide{
+    display:block;
+    height: 280px;
+    width:250px;
+    font-size: 18px;
+    line-height: 25px;
+    background-color: firebrick;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    float: left;
+}
+.buyslide{
+    position: absolute;
+    left: 150px;
+}
+.sellslide{
+    position: absolute;
+    left: 680px;
+
+}
+.div3 a{
+    text-decoration:none;
+    color:white;
+}
+#bt4,#bt5{
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: black;
+    padding: 10px;
+    color: aliceblue;    
+}
+#bt4{
+    position: absolute;
+    top: 220px;
+    left: 60px;
+}
+.div4{
+    height: 950px;
+    width: 100%;
+    background-color: rgb(228, 162, 20);
+    float: left;
+
+}
+.div4 h2{
+    margin-top: 50px;
+    color: rgb(217, 218, 208);
+    font-size: 35px;
+    font-weight: 600;
+    text-align:center
+}
+.row2{
+    height: 300px;
+    width:100%;
+    margin-top: 50px;
+}
+.reviewdiv{
+    float: left;
+    height: 200px;
+    width:20%;
+    background-color:chocolate;
+    margin-left: 150px;
+    border: 5px solid purple;
+    padding: 20px;
+    box-sizing: border-box;
+    font: 15px;
+    color: rgb(188, 199, 235);
+    font-weight: 700em;
+}
+.div4 button{
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: black;
+    padding: 10px;
+    color: aliceblue;
+   margin-left: 500px;
+}
+.div5{
+    display: none;
+    height: 400px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 25px;
+    background-color: rgb(228, 162, 20);
+    color: white;
+}
+.formstyle{
+    height: 470px;
+    position: relative;
+    padding: 30px;
+    width: 500px;
+    margin-left:300px;
+    background-color: coral;
+    z-index: 1;
+}
+.formstyle form label{
+    position: absolute;
+    left: 50px;
+}
+.formstyle form input,.formstyle form textarea{
+    position: absolute;
+    left:150px;
+
+}
+#sb{
+    margin-top:120px
+}
+footer{
+    height: 200px;
+    width: 100%;
+    background-color: rgb(8, 85, 8);
+    float:left;
+    margin-top:auto;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+footer img{
+    margin-top: 30px;
+    margin-left:30px;
+    float: left;
+}
+footer ol{
+    display: flex;
+    justify-content: center;
+    margin-top:80px;
+    color: white;
+    font-size: medium;
+}
+footer ol li:hover{
+    color: black;
+    text-decoration: underline; 
+}
+#cart_table{
+    margin-top:50px;
+    margin-bottom:50px;
+
+}
+#checkout_div{
+    margin-top:100px;
+    margin-bottom:100px;
+    height:600px;
+}
+#login_div{
+    margin-left:500px;
+    margin-top:50px;
+    height: 350px;
+    width: 300px;
+    background-color:white;
+    padding:30px
+}
+#login_div_head{
+    margin:0px;
+    height:50px;
+    width:100%;
+}
+#register_div{
+    margin-left:500px;
+    margin-top:50px;
+    height: 650px;
+    width: 300px;
+    border: 5px solid black;
+    margin-bottom:50px;
+    padding:15px;
+    background-image:url(mainbg.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#sign_up_head{
+    margin-left:500px;
+}
+#order_div,#orderitems_div{
+    margin-left:150px;
+    margin-top:50px;
+    min-height: 650px;
+    width: 1000px;
+    border: 5px solid black;
+    margin-bottom:50px;
+    padding:15px;
+    background-image:url(mainbg.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}

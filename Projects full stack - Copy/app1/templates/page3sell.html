@@ -1,0 +1,57 @@
+{% extends 'Header&Footer.html' %}
+{% block content %}
+    <style>
+#main_sell_div{
+    min-height: 500px;
+    min-width: 500-px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+#sell_div{
+    position: relative;
+    height: 850px;
+    width: 550px;
+    margin-left: 400px;
+    background-color: rgb(26, 138, 11);
+    border: 10px solid white;
+}
+#sell_div h1{
+    padding-left: 100px;
+}
+
+.l1{
+    position: absolute;
+    left: 40px;
+}
+#sell_div input,textarea{
+    position: absolute;
+    left: 220px;
+}
+#bt1{
+    margin-top: 250px;
+    margin-left: 50px;
+    background-color: black;
+    padding: 10px;
+    color: WHITE;
+}
+    </style>
+<div id="main_sell_div">
+    <div id="sell_div">
+        <h1>Registration form</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label class="l1">Name of the product:</label> <input type="text" name="np1" placeholder="enter the product name"><br><br>
+            <label class="l1">Name of the seller:</label> <input type="text" name="n1" placeholder="enter your name"><br><br>
+            <label class="l1">Email:</label> <input type="text" name="e1" placeholder="enter your email"><br><br>
+            <label class="l1">Phone number:</label> <input type="number" name="p1" placeholder="enter your Phone number"><br><br>
+            <label class="l1">Address:</label><input type="text" name="a1" placeholder="enter your address"><br><br>
+            <label class="l1">PIN CODE:</label><input type="number" name="pc1" placeholder="enter your pincode"><br><br>
+            <label class="l1">Image:</label><input type="file" name="i1" placeholder="enter image"><br><br>
+            <label class="l1">Quantity For Sale:</label><input type="number" name="q1" placeholder="enter the quantity"><br><br>
+            <label class="l1">Price/kg:</label><input type="number" name="pr1" placeholder="enter the unit price"><br><br>
+            <label class="l1">Comments:</label><textarea name="c1" cols="30" rows="10"></textarea>
+            <input ID="bt1" type="submit" value="SUBMIT">
+        </form>
+    </div>
+    </div>
+{% endblock %}

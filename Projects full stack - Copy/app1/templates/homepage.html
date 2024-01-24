@@ -1,0 +1,153 @@
+{% extends 'Header&Footer.html' %}
+{% block content %}
+
+{% load static %}
+    <!-- Login Page -->
+    <div class="div2">
+        <div id="login_div">
+            {% if user.is_authenticated %}
+            <h1>Hello {{user.username}}</h1>
+            <h2><a href="logout">Logout</a></h2>
+            {% else %}
+            <div id="login_div_head"><h1>Login Page</h1></div>
+            <hr style="color:green; height:10px;">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label>Username :</label><br>
+            <input type="text" name="uname"><br>
+            <label>Password  :</label><br>
+            <input type="password" name="pword"><br>
+            <input type="submit" value="Login" class="btn btn-dark"><br><br>
+            <a href="{% url 'registerpage' %}" class="btn btn-primary">Sign Up</a><br>
+        </form>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="div3" id="id2"><h2>About</h2>
+    <ul style="list-style-type:disc">
+        <li>This website has been developed with the intentiion to <b>procure and distribute fresh products.</b></li>
+        <li>The website mainly focuses on the buying and selling of homegrown agricultural products.</li>
+        <li> As this is more of a direct approach to sell and buy products,this method eliminates
+          the additional cost incured due to transportation and middlemen which brings in more profit for
+          manufacturers and saves the extra charges for consumers.</li>
+          <li> This could turnout huge relief for farmers
+           who face poverty due to the low selling price assigned to their
+            products as part of the normal selling approach.</li>
+
+        </ul>
+
+        <Button id="bt1" class="buttonslide">BUY</Button>
+        <Button id="bt2" class="buttonslide">SELL</Button>
+
+
+        <div class="row1">
+        <div class="buyslide">The BUY option has been provided so that consumers can obtain homegrown
+             agricultural products ranging from large scale to small
+             scale at reduced price. <br>
+             <button id="bt4" ><a href="{% url 'buypage' %}">Click here to BUY</a></button></div>
+        <div class="sellslide">The SELL option provides the farmers and manufacturers
+             with customer options,a direct approach which enable them to
+             obtain greater profits. <br>
+             <button id="bt5" ><a href="{% url 'sellpage' %}">Click here to SELL</a></button></div>
+        </div>
+    </div>
+
+
+    <!-- REVIEW -->
+    <div class="div4" id="id3">
+        <h2>Review</h2>
+        <div class="row2">
+            {% for i in con1 %}
+            <div class="reviewdiv">
+                <img src="{{i.Image.url}}" alt="" height="50px" width="50px">
+                <div>
+                    Name:{{i.Name}}
+                    <br>Address:{{i.Address}}
+                    <br>Phone No.:{{i.Phone}}
+                    <br>Email:{{i.Email}}
+                    <br>Review:{{i.Review}}
+                    <br></div>
+            </div>
+                {% endfor %}
+            <div class="reviewdiv">
+                <img src="" alt="" height="50px" width="50px">
+                <div>
+                    Name:
+                    <br>Address:
+                    <br>Phone No.:
+                    <br>Email:
+                    <br>Review:
+                    <br></div>
+                </div>
+
+            <div class="reviewdiv">
+                <img src="" alt="" height="50px" width="50px">
+                <div>
+                    Name:
+                    <br>Address:
+                    <br>Phone No.:
+                    <br>Email:
+                    <br>Review:
+                    <br></div>
+            </div>
+        </div>
+        <button id="bt7">Submit a Review</button>
+        <div class="div5">
+            <div class="formstyle">
+            <form action="reviews" method="POST">
+                {% csrf_token %}
+
+                <label for="">Name:</label>
+                <input type="text" name="n1"><br><br>
+                <label for="">Address:</label>
+                <textarea cols="30" rows="1" name="a1"></textarea><br><br>
+                <label for="">Email:</label>
+                <input type="email" name="e1"><br><br>
+                <label for="">Phone No.:</label>
+                <input type="text" name="p1"><br><br>
+                <label>Image :</label>
+                <input type="file" name="i1"><br><br>
+                <label for="">Review:</label>
+                <textarea name="r1" id="" cols="30" rows="5" ></textarea><br>
+                <input id="sb" type="submit" name="Submit">
+
+
+            </form>
+        </div>
+        </div>
+    </div>
+<!-- footer -->
+
+
+    
+
+
+</div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#bt1").click(function(){
+                $(".buyslide").slideToggle('slow')
+            })
+        })
+        $(document).ready(function(){
+            $("#bt2").click(function(){
+                $(".sellslide").slideToggle('slow')
+            })
+        })
+        $(document).ready(function(){
+            $("#bt3").click(function(){
+                $(".bidslide").slideToggle('slow')
+            })
+        })
+        $(document).ready(function(){
+            $("#bt7").click(function(){
+                $(".div5").slideToggle('slow')
+            })
+        })
+
+
+    </script>
+{% endblock %}

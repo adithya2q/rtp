@@ -1,0 +1,64 @@
+{% extends 'Header&Footer.html' %}
+{% block content %}
+    <style>
+        #buy_div{
+           min-height: 500px;
+           min-width: 500-px;
+           margin-top:50px;
+           margin-bottom:50px;
+        }
+        table,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="buy_div">
+        <table>
+                {% for i in key1 %}
+            <tr>
+                <td>
+                    <p><img src="{{i.Image.url}}" height="50%" width="90%"></p>
+                    <h2>Details from seller</h2>
+                    <p>Name of seller: {{i.Name}}</p><br>
+                    <p>Name of product: {{i.Productname}}</p><br>
+                    <p>Email: {{i.Email}}</p><br>
+                    <p>PhoneNumber: {{i.PhoneNumber}}</p><br>
+                </td>
+                <td>
+                    <p>Address: {{i.Address}}</p><br>
+                    <p>PINCODE: {{i.PINCODE}}</p><br>
+                     <p>Comments by seller: {{i.Comments}}</p><br>
+                    <p>Total quantity availabke for sale: {{i.Quantity_For_Sale}}</p><br>
+                    <p>Price/(kg or unit): {{i.Price_per_kg}}</p>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                    <input type="hidden" name="product_id" value="{{i.id}}">
+                    <label>Enter the quantity:</label> <input type="number" name="req_quantity" id="req_quantity"><br>
+                    <button>Add to cart</button>
+                    </form>
+                </td>
+            <tr>
+                <!--<td>-->
+                    <!--<img src="" height="50%" width="90%">-->
+                    <!--<label for="">Price:</label><input type="number" ><br>-->
+                    <!--<label for="">Quantity :</label><input type="number"><br>-->
+                    <!--<input type="submit" value="Add to Cart">-->
+                <!--</td>-->
+                <!--<td>-->
+                    <!--<img src="" height="50%" width="90%">-->
+                    <!--<label for="">Price:</label><input type="number" ><br>-->
+                    <!--<label for="">Quantity :</label><input type="number" ><br>-->
+                    <!--<input type="submit" value="Add to Cart">-->
+                <!--</td>-->
+            <!--</tr>-->
+
+            {% endfor %}
+        </table>
+    </div>
+
+
+
+{% endblock %}

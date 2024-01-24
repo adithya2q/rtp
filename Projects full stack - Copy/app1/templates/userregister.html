@@ -1,0 +1,22 @@
+{% extends 'Header&Footer.html' %}
+{% block content %}
+
+<h1 id="sign_up_head">Sign Up Form </h1>
+<div id="register_div">
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label class="form-label">Username:</label><input class="form-control" type="text" name="uname"><br>
+    <label class="form-label">First Name:</label><input type="text" class="form-control" name="fname"><br>
+    <label class="form-label">Last Name:</label><input type="text" class="form-control" name="lname"><br>
+    <label class="form-label">Email:</label><input type="email" class="form-control" name="email"><br>
+    <label class="form-label">Password:</label><input type="password" class="form-control" name="pass"><br>
+    <label class="form-label">Confirm Password:</label><input type="password" class="form-control" name="cpass"><br>
+    <input type="submit" value="Submit Form">
+    {% for msg in messages %}
+    {{msg}}
+    {% endfor %}
+
+</form>
+</div>
+
+{% endblock %}

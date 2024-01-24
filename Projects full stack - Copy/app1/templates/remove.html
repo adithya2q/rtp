@@ -1,0 +1,11 @@
+{% extends 'Header&Footer.html' %}
+{% block content %}
+<p>Are you sure you want to remove '{{key3}}'</p>
+<button><a href="{% url 'cartpage' %}">Cancel</a></button><br><br>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="submit" value="Remove"><br>
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+{% endblock %}

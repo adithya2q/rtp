@@ -1,0 +1,79 @@
+{% extends 'Header&Footer.html' %}
+{% block content %}
+
+<div class="orderitems_div">
+<div class="container">
+
+    <h1>Order View</h1>
+<div class="row">
+
+    <div class="col-sm-12">
+        <div class="card-shadow">
+            <div class="card-body">
+                <div class="row">
+
+    <div class="col-sm-6">
+    <h5>Shipping Details</h5>
+    <label class="mt-2">First Name</label>
+    <div class="border p-1">{{order.First_name}}</div>
+    <label class="mt-2">Last Name</label>
+    <div class="border p-1">{{order.Last_name}}</div>
+    <label class="mt-2">Email</label>
+    <div class="border p-1">{{order.Email}}</div>
+
+    <label class="mt-2">Phone</label>
+    <div class="border p-1">{{order.Phone}}</div>
+
+    <label class="mt-2">Address</label>
+    <div class="border p-1">{{order.Address}}
+        {{order.City}}
+        {{order.State}}
+        {{order.Country}}
+        {{order.Pincode}}
+    </div>
+
+
+    </div>
+
+                    <div class="col-sm-6">
+
+                         <table class="table table-striped ">
+                <thead>
+                    <tr>
+                        <th >Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Image</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in orderitems %}
+                        <tr>
+                             <td>{{i.product.Name}}</td>
+                            <td>{{i.quantity}}</td>
+                            <td>{{i.unit_price_at_purchase}}</td>
+                            <td><img src="{{i.product.Image.url}}" height="150px" width="150px"></td>
+
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+                    </div>
+</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

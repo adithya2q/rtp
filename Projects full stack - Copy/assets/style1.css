@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    width:100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(image6.jpg);
+}
+h1{
+    font-size: 50px;
+    color: white;
+}
+header{
+    background-color: rgb(8, 85, 8);
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 180px;
+    width:100%;
+    z-index: 1;
+}
+.div1{
+    height: 150px;
+    width:100%;
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+ol{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+li{
+    margin-right: 50px;
+    font-size: 25px;
+    
+}
+li a{
+    text-decoration: none;
+    padding: 20px 20px;
+    font-weight: bolder;
+    color: black;
+}
+li a:hover{
+    background-color: black;
+    color: white;
+}
+/* .div2{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 400px;
+    left:50px;
+} */
+
+.div3{
+    background-image: url(bananafarm.jpg);
+    background-size: 1200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode:normal;
+    height:870px;
+    width: 100%;
+    background-color: rgb(79, 87, 78);
+    position: absolute;
+    top: 735px;
+    left:0px;
+}
+.div3 h2{
+   margin-top: 50px;
+    color: rgb(217, 218, 208);
+    font-size: 35px;
+    font-weight: 600;
+    text-align:center
+}
+.div3 ul{
+    margin: 40px;
+    font-size: 20px;
+
+}
+.div3 ul li{
+    padding: 10px;
+    margin-left: 75px;
+}
+.div3 span{
+    font-size: 25px;
+    color: rgb(7, 97, 7);
+}
+.div3 .buttonslide{
+    height: 50px;
+    width: 100px;
+    margin-left: 200px;
+    margin-right: 100px;
+    background-color: black;
+    color: white;
+}
+.row{
+    height: 350px;
+    width:100%;
+    position: relative;
+}
+.buyslide,.sellslide,.bidslide{
+    display: none;
+    height: 350px;
+    width:170px;
+    font-size: 20px;
+    line-height: 25px;
+    background-color: firebrick;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    float: left;
+}
+.buyslide{
+    position: absolute;
+    left: 150px;
+}
+.sellslide{
+    position: absolute;
+    left: 560px;
+}
+.bidslide{
+    position: relative;
+    left: 960px;
+}
+#bt4,#bt5,#bt6{
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: black;
+    padding: 10px;
+    color: aliceblue;
+    
+}
+.div4{
+    height: 850px;
+    width: 100%;
+    background-color: rgb(228, 162, 20);
+    position:absolute;
+    top: 1600px;
+
+}
+.div4 h2{
+    margin-top: 50px;
+    color: rgb(217, 218, 208);
+    font-size: 35px;
+    font-weight: 600;
+    text-align:center
+}
+.row2{
+    height: 300px;
+    width:100%;
+    position: relative;
+    margin-top: 50px;
+}
+.reviewdiv{
+    float: left;
+    height: 200px;
+    width:20%;
+    background-color:chocolate;
+    margin-left: 150px;
+    border: 5px solid purple;
+    padding: 20px;
+    box-sizing: border-box;
+    font: 15px;
+    color: rgb(188, 199, 235);
+    font-weight: 700em;
+}
+.div4 button{
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: black;
+    padding: 10px;
+    color: aliceblue;
+   margin-left: 500px;
+}
+.div5{
+    display: none;
+    height: 400px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 25px;
+    background-color: rgb(228, 162, 20);
+    color: white;
+}
+.formstyle{
+    height: 300px;
+    position: relative;
+    padding: 30px;
+    width: 500px;
+    margin-left:300px;
+    background-color: coral;
+    z-index: 1;
+}
+.formstyle form label{
+    position: absolute;
+    left: 50px;
+}
+.formstyle form input,textarea{
+    position: absolute;
+    left:150px;
+
+}
+footer{
+    position: absolute;
+    top: 2300px;
+    height: 200px;
+    width: 100%;
+    background-color: rgb(8, 85, 8);
+    margin-top: auto;
+}
+footer img{
+    margin-top: 30px;
+    margin-left:30px;
+    float: left;
+}
+footer ol{
+    display: flex;
+    justify-content: center;
+    margin-top:80px;
+    color: white;
+    font-size: medium;
+}
+footer ol li:hover{
+    color: black;
+    text-decoration: underline; 
+}
